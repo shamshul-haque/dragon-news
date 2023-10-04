@@ -51,7 +51,10 @@ const Navbar = () => {
             <img src={avatar} alt="avatar" />
           </div>
         </label>
-        <Link to="/login" className="btn">
+        <Link
+          to="/login"
+          className="bg-stone-800 px-5 py-2 rounded-md text-white font-semibold"
+        >
           Login
         </Link>
       </div>
