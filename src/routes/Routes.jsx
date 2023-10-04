@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../layouts/Root";
 import Home from "../pages/home/Home";
+import NewsDetails from "../pages/home/NewsDetails";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 
@@ -12,6 +13,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch("/news.json"),
+      },
+      {
+        path: "/news/:id",
+        element: <NewsDetails />,
       },
       {
         path: "/login",
