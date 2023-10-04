@@ -22,7 +22,8 @@ const AuthProvider = ({ children }) => {
   // login user
   const logIn = (email, password) => {
     setLoading(true);
-    signInWithEmailAndPassword(auth, email, password);
+    console.log(email, password);
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   useEffect(() => {
@@ -31,7 +32,7 @@ const AuthProvider = ({ children }) => {
       setLoading(false);
     });
     return () => {
-      unSubscribe;
+      return unSubscribe();
     };
   }, []);
 
