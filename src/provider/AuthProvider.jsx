@@ -9,6 +9,7 @@ import auth from "../configuration/configuration";
 
 export const AuthContext = createContext(null);
 
+// eslint-disable-next-line react/prop-types
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
